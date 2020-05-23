@@ -3,15 +3,15 @@ using namespace std;
 class fraction{
 public:
 int num,den;
-fraction(int n,int d)
+fraction()
 {
-	fnew.num=1;
-	fnew.den=1;
+	num=1;
+    den=1;
 }
 fraction(int n,int d)
 {
-	fnew.num=n;
-	fnew.den=d;
+	num=n;
+	den=d;
 }
 void simplify()
 {
@@ -42,11 +42,11 @@ void simplify()
 		fraction fnew;
 		fnew.num=n;
 		fnew.den=d;
-		simplify();
+		fnew.simplify();
 		return fnew;
 	}
 void show()
-{  cout<<num<<"/"<<den;}
+{  cout<<endl<<num<<"/"<<den;}
 };
 
 
@@ -60,10 +60,11 @@ int main (void)
     g2.num=18;
     g1.den=7;
     g2.den=2;
-    g1.calc(g2);
+
 	fraction g3= g1+g2;
+	g3.show();
 	fraction g4=g1*g2;
-	g4.show;
+	g4.show();
 }
 
 
