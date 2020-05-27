@@ -36,7 +36,7 @@ public:
             degcoeff[i]=0;
         }
     }
-    polynomial(polynomial const &r)
+    polynomial(const polynomial& r)
     {
         this->capacity=r.capacity;
         for(int i=0;i<this->capacity;i++)
@@ -82,7 +82,11 @@ int main(void)
     p1.setcoeff(1,4);
     p1.setcoeff(2,9);
     p1.setcoeff(4,3);
-    p1.setcoeff(25,3);
+   polynomial p2(p1);
+    //p1.setcoeff(25,3);
     p1.print();
+    cout<<endl;
+    p2.print();
+
 
 }
